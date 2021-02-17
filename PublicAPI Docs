@@ -23,13 +23,36 @@ paths:
       schema:
         type: string
       required: true
-      description: serial number of machione being accessed
+      description: serial number of machine being accessed
     responses:
       200:
         description: Request was successful, returns a status object.
         $ref: "definitions/status'
       400:
-        descrtiption: Request was unsuccessful, serial invalid
+        descrtiption: Request was unsuccessful, serial or api key invalid
+      500:
+        description: Internal server error, there was a problem processing the request
+  '/on':
+    post:
+      description: Turn on a given machine
+    parameters:
+     -in: header
+       name: key
+       schema:
+        type: string
+       required: true
+       description: api key
+     -in: header
+      name: serial
+      schema:
+        type: string
+      required: true
+      description: serial number of machine being accessed
+    responses:
+      200:
+        description: Request was successful
+      400:
+        descrtiption: Request was unsuccessful, serial or api key invalid
       500:
         description: Internal server error, there was a problem processing the request
        
