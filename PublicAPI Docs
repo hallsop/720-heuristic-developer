@@ -78,7 +78,22 @@ paths:
         descrtiption: Request was unsuccessful, serial or api key invalid
       500:
         description: Internal server error, there was a problem processing the request
-       
-       
-    
-    
+  '/health':
+    get:
+      description: Get the health status of the API 
+    parameters:
+     -in: header
+       name: key
+       schema:
+        type: string
+       required: true
+       description: api key
+    responses:
+      200:
+        description: Request was successful, api is healthy
+      400:
+        descrtiption: Request was unsuccessful, api key invalid
+      418:
+        description: I'm a teapot
+      500:
+        description: Internal server error, there was a problem processing the request
