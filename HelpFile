@@ -10,3 +10,8 @@ Requirements:
                 -An API key is needed to access the service. 
                 -This can be acquired through this form: https://forms.office.com/Pages/ResponsePage.aspx?id=vc-6Ce9HZUSSZTVG8ur2vNFXw2cPp0VElavHYhOdZ_RURUtIQ05YNFMzUEUxSUNVRURHUU01VjhXRi4u
                 -An email is needed to recieve an API key
+                
+Using the API
+        -The API is accessed through HTTP requests.
+        -The documentation for this can be found in TINAML format in the documentation section.
+        -The base path is www.dyson720heuristic.com/API
