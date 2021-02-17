@@ -1,0 +1,37 @@
+info: 
+  version: 1.0
+  title: "Dyson 720 Heuristic Developer Web API - Public"
+  contact:
+    name: Group 4
+    email: Don't
+tags:
+  name: 720Dev
+  description: Endpoints to control robot functionality
+paths:
+  '/status':
+    get:
+      description: Get the status of a given machine
+    parameters:
+      -in: header
+       name: key
+       schema:
+        type: string
+       required: true
+       description: api key
+     -in: header
+      name: serial
+      schema:
+        type: string
+      required: true
+      description: serial number of machione being accessed
+    responses:
+      200:
+        description: Request was successful, returns a status object.
+        $ref: "definitions/status'
+      400:
+        descrtiption: Request was unsuccessful, serial invalid
+      500:
+        description: Internal server error, there was a problem processing the request
+       
+    
+    
