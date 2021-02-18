@@ -1,9 +1,9 @@
 Help!
-        This file provides example API calls to get started using the Dyson 720 Heuristic web API.
+        This file provides example API calls to get started using the 720 Heuristic web API.
         
         
 Requirements:
-        -Dyson 720 Heuristic Robot
+        - 720 Heuristic Robot
                 -This is the robot compatible with the API. 
                 -In order to access it's functions, you will need to find its serial number located on a sticker on the base of the machine
         -API Key 
@@ -14,4 +14,4 @@ Requirements:
 Using the API
         -The API is accessed through HTTP requests.
         -The documentation for this can be found in TINAML format in the documentation section.
-        -The base path is www.dyson720heuristic.com/API
+        -The base path is www.720heuristic.com/API
