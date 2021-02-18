@@ -1,3 +1,4 @@
+## This is a student project developed for the University of Warwick's WM351: Agile Software Development module in February 2021. The API referenced here cannot be accessed.
 # 720-heuristic-developer
 
 ## What is our aim?
