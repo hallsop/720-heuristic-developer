@@ -5,7 +5,10 @@
 - to allow collaboration in this development
 - for tech savvy users to add new skills to their 720 Heuristic
 
+### Read our [wiki](https://github.com/hallsop/720-heuristic-developer/wiki/Getting-Started) for tips on getting started
+
 ### Check out our [forum](https://github.com/hallsop/720-heuristic-developer/discussions) to discuss with other likeminded individuals!
+
 
 ## Who are we?
 - [hallsop](https://github.com/hallsop) - Machine Learning Engineer
