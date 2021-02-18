@@ -125,7 +125,7 @@ paths:
         description: Internal server error, there was a problem processing the request
   '/scheduleclean':
     get:
-      description: Get the statistics from the last robot clean
+      description: Schedule a robot clean
     parameters:
      -in: header
        name: key
@@ -133,6 +133,18 @@ paths:
         type: string
        required: true
        description: api key
+     -in: header
+      name: serial
+      schema:
+        type: string
+      required: true
+      description: serial number of machine being accessed
+    -in: header
+      name: cleantime
+      schema:
+        type:datetime
+       required: true
+       description: time and date for scheduled clean
     responses:
       200:
         description: Request was successful, returns a scheduled clean object.
@@ -141,6 +153,3 @@ paths:
         descrtiption: Request was unsuccessful, api key or serial invalid
       500:
         description: Internal server error, there was a problem processing the request
-      
-        
-     
