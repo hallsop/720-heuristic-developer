@@ -7,4 +7,7 @@
 
 Check out our [forum](https://github.com/hallsop/720-heuristic-developer/discussions) to discuss with other likeminded individuals!
 
-
+Who are we?
+- [hallsop](https://github.com/hallsop) - Machine Learning Engineer
+- [corvalban](https://github.com/corvalban) - Cloud Provisioner
+- [scalto](https://github.com/scalto) - Data Scientist
