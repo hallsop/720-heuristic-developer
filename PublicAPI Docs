@@ -1,6 +1,6 @@
 info: 
   version: 1.0
-  title: "Dyson 720 Heuristic Developer Web API - Public"
+  title: "720 Heuristic Developer Web API - Public"
   contact:
     name: Group 4
     email: Don't
@@ -88,12 +88,62 @@ paths:
         type: string
        required: true
        description: api key
+     -in: header
+      name: serial
+      schema:
+        type: string
+      required: true
+     -in: header
+      name: cleantime
+      schema:
+        type:datetime
     responses:
       200:
-        description: Request was successful, api is healthy
+        description: Request was successful, clean has been scheduled for 
       400:
         descrtiption: Request was unsuccessful, api key invalid
       418:
         description: I'm a teapot
       500:
         description: Internal server error, there was a problem processing the request
+  '/lastclean':
+    get:
+      description: Get the statistics from the last robot clean
+    parameters:
+     -in: header
+       name: key
+       schema:
+        type: string
+       required: true
+       description: api key
+    responses:
+      200:
+        description: Request was successful, returns a last clean object.
+        $ref: "definitions/lastclean"
+      400:
+        descrtiption: Request was unsuccessful, api key or serial invalid
+      404:
+        description: Unable to find a previous clean
+      500:
+        description: Internal server error, there was a problem processing the request
+  '/scheduleclean':
+    get:
+      description: Get the statistics from the last robot clean
+    parameters:
+     -in: header
+       name: key
+       schema:
+        type: string
+       required: true
+       description: api key
+    responses:
+      200:
+        description: Request was successful, returns a scheduled clean object.
+        $ref: "definitions/scheduledclean"
+      400:
+        descrtiption: Request was unsuccessful, api key or serial invalid
+      500:
+        description: Internal server error, there was a problem processing the request
+      
+        
+     
