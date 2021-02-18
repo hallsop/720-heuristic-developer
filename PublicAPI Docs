@@ -78,6 +78,7 @@ paths:
         descrtiption: Request was unsuccessful, serial or api key invalid
       500:
         description: Internal server error, there was a problem processing the request
+  
   '/health':
     get:
       description: Get the health status of the API 
@@ -88,15 +89,6 @@ paths:
         type: string
        required: true
        description: api key
-     -in: header
-      name: serial
-      schema:
-        type: string
-      required: true
-     -in: header
-      name: cleantime
-      schema:
-        type:datetime
     responses:
       200:
         description: Request was successful, clean has been scheduled for 
@@ -116,6 +108,12 @@ paths:
         type: string
        required: true
        description: api key
+     -in: header
+      name: serial
+      schema:
+        type: string
+      required: true
+      description: serial number of machine being accessed
     responses:
       200:
         description: Request was successful, returns a last clean object.
